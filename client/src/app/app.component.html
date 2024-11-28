@@ -1,1 +1,12 @@
-<router-outlet></router-outlet>
+
+<clr-main-container  class="main-container">
+    <app-header  ></app-header>
+    <div class="content-container">
+      <div class="content-area espace">
+        <router-outlet ></router-outlet>
+      </div>
+      <clr-vertical-nav   class="navTaille" [clrVerticalNavCollapsible]="true" [clrVerticalNavCollapsed]="true" [clr-nav-level]="1">
+        <app-side-nav ></app-side-nav>
+      </clr-vertical-nav>
+    </div>
+  </clr-main-container>

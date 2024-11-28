@@ -1,17 +1,16 @@
-<div class="clr-row">
 
-    <clr-dg-action-bar> 
-<div class="btn-group btn-primary">
-  <button class="btn">ADD</button>
-  <button class="btn btn-success" *ngIf="selectedItems.length === 1"    (click)="updateItem()">UPDATE</button>
-  <button class="btn btn-danger" (click)="deleteItems()" *ngIf="hasSelection()">DELETE</button>
-</div>
-</clr-dg-action-bar>
 
-    <div class="clr-col-12">
+
+
       <clr-datagrid [(clrDgSelected)]="selectedItems" [clrDgLoading]="loading">
   
-  
+        <clr-dg-action-bar> 
+          <div class="btn-group btn-primary">
+            <button class="btn">ADD</button>
+            <button class="btn btn-success" *ngIf="selectedItems.length === 1"    (click)="updateItem()">UPDATE</button>
+            <button class="btn btn-danger" (click)="deleteItems()" *ngIf="hasSelection()">DELETE</button>
+          </div>
+          </clr-dg-action-bar>
         <!-- Data Columns -->
         <clr-dg-column>User ID</clr-dg-column>
         <clr-dg-column>Name</clr-dg-column>
@@ -61,7 +60,3 @@
         </clr-dg-footer>
       </clr-datagrid>
       <app-user-delete *ngIf="show" [listUser]="selectedItems" (closed)="close()" (saved)="save()"></app-user-delete>
-
-    </div>
-  </div>
-  

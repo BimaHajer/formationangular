@@ -6,13 +6,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { UserModule } from './user/user.module';
+import { CoreModule } from './core/core.module';
+import { ClarityModule } from '@clr/angular';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,BrowserAnimationsModule,HttpClientModule
+    AppRoutingModule,BrowserAnimationsModule,HttpClientModule,CoreModule,ClarityModule
   ],
   providers: [],
   bootstrap: [AppComponent]
